@@ -1,0 +1,45 @@
+plugins {
+    id "com.android.application"
+    id 'com.google.gms.google-services' // Firebase
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin" // Flutter Plugin
+}
+
+android {
+    namespace "com.example.firebase" // ✅ FIXED (Removed `=`)
+    compileSdk 34  // ✅ Replaced `flutter.compileSdkVersion` with actual number
+    ndkVersion "23.1.7779620"
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    defaultConfig {
+        applicationId "com.example.firebase"
+        minSdk 21  // ✅ Replaced `flutter.minSdkVersion`
+        targetSdk 34  // ✅ Replaced `flutter.targetSdkVersion`
+        versionCode 1
+        versionName "1.0"
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file("$rootDir/debug.keystore")
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source "../.."
+}
