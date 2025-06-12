@@ -1,6 +1,5 @@
-# firebase
-
-A new Flutter project.
+# Firebase-Auth-Spark
+Firebase-Auth-Spark App is a fully Firebase-powered authentication boilerplate that sets up user sign-up, sign-in, and session handling using Firebase Authentication. The entire app architecture is built around Firebase services, including:  Firebase Authentication for secure user login (email/password, Google, etc.)
 
 ## Getting Started
 
@@ -14,3 +13,4 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
